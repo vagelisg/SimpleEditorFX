@@ -8,6 +8,8 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.CheckMenuItem;
 import javafx.scene.control.TextArea;
+import javafx.scene.input.Clipboard;
+import javafx.scene.input.ClipboardContent;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
@@ -120,8 +122,8 @@ public class Controller implements Initializable {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
 
         alert.setTitle("About");
-        alert.setHeaderText("A project just for fun written by abrand.");
-        alert.setContentText("github.com/abrandell");
+        alert.setHeaderText("A project just for fun.");
+        alert.setContentText("original code github.com/abrandell");
         alert.showAndWait();
     }
 
@@ -144,5 +146,20 @@ public class Controller implements Initializable {
             default:
                 textArea.setStyle("-fx-font-size: 22px");
         }
+    }
+
+    @FXML
+    public void mnCut(ActionEvent e){
+        textArea.cut();
+    }
+
+    @FXML
+    public void mnCopy(ActionEvent e){
+        textArea.copy();
+    }
+
+    @FXML
+    public void mnPaste(ActionEvent e){
+        textArea.paste();
     }
 }
