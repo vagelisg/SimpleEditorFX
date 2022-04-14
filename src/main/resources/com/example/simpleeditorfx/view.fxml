@@ -12,10 +12,7 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
-            prefHeight="400.0" prefWidth="600.0" styleClass="master-pane" stylesheets="@Stylesheet.css"
-            xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="com.example.simpleeditorfx.Controller">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="master-pane" stylesheets="@Stylesheet.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.simpleeditorfx.Controller">
     <center>
         <TextArea fx:id="textArea" nodeOrientation="LEFT_TO_RIGHT" styleClass="editor-text" wrapText="true">
             <font>
@@ -59,6 +56,9 @@
                             <CheckMenuItem fx:id="large" mnemonicParsing="false" onAction="#fontSize" text="Large ( 30px )" />
                         </items>
                     </Menu>
+               <MenuItem fx:id="mnCut" mnemonicParsing="false" onAction="#mnCut" text="Cut" />
+               <MenuItem fx:id="mnCopy" mnemonicParsing="false" onAction="#mnCopy" text="Copy" />
+               <MenuItem fx:id="mnPaste" mnemonicParsing="false" onAction="#mnPaste" text="Paste" />
                 </items></Menu>
             <Menu mnemonicParsing="false" text="Info">
                 <MenuItem mnemonicParsing="false" onAction="#about" text="About" />
